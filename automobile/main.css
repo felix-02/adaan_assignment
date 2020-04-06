@@ -1,0 +1,449 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+  #map {
+    height: 100%;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+/* -----utility classes----- */
+
+.bold{
+    font-weight: bold;
+}
+.font-large{
+    font-size: 22px;
+}
+
+.background-move{
+background-image: url(https://le-de.cdn-website.com/6e6580db0571417c99b179a8ae307597/dms3rep/multi/opt/ac48d372-a321-438d-b161-0485bb52ed56-1600-2880w.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+/* ----------header styles-------------- */
+
+header{
+    height: 19vh;
+    background: #f7fff7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 15px;
+}
+header a img{
+    width: 210px;
+    height: 100px;
+}
+header ul{
+     text-align: center;
+}
+header ul li{
+    list-style:none ;
+     display: inline-block;  
+}
+header ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+header ul li a:hover{
+    color: orange;
+}
+header>a:last-child{
+    text-decoration: none;
+    background-color:#edc45e;
+    color: white;
+    padding: 15px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    transition: background-color .1s;
+}
+header>a:last-child:hover{
+    background-color: orange;
+}
+header ul li:not(:last-child){
+    margin-right: 15px;
+}
+
+
+/* -------slideshow styles */
+
+.slideshowContainer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 500px;
+}
+
+.imageSlides {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: -1;
+}
+
+/* add 'visible' class via Javascript */
+.visible {
+  opacity: 1;
+}
+
+.slideshowArrow {
+  font-size: 7em;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.slideshowArrow:hover {
+  opacity: 0.75;
+}
+
+#leftArrow {
+  position: absolute;
+  left: 4%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#rightArrow {
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.slideshowCircles {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.circle {
+  display: inline-block;
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: solid 2px rgba(255, 255, 255, 0.5);
+  transition: 1s ease-in-out;
+}
+
+.dot {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: solid 2px rgba(255, 255, 255, 0.5);
+}
+
+
+/* -----intro styles------- */
+.intro{
+    text-align: center  ;
+    height: 27vh;
+    padding: 40px;
+}
+.intro h1{
+    color: orange;
+    margin-bottom: 35px;
+    font-size: 30px;
+    font-weight: lighter;
+}
+.intro a{
+    text-decoration: none;
+    color:black;
+    background-color: #edc45e;
+    display:inline-block;
+    padding: 20px;
+
+}
+.intro a:hover{
+    background-color: orange;
+    color: white;
+}
+
+/* ----intro para styles */
+.intro-para{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    background-color: #eee; 
+}
+.intro-para>div{
+    flex-basis: 45%;
+    height: 30vh;
+    text-align: justify;
+}
+.intro-para span{
+    font-weight: bold;
+}
+.intro-para a{
+    text-decoration: none;
+    color: orange;
+}
+
+/* -----float container styles------ */
+.float-container{
+    display: flex;
+    height: 60vh;
+}
+.float-container >div{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.float-container>div:nth-child(1){
+     background-image: url(https://le-de.cdn-website.com/6e6580db0571417c99b179a8ae307597/dms3rep/multi/opt/04a2a6a4-2ca5-43b6-bf0c-5eae073b92fd-1600-2880w.jpg);
+    
+}
+.float-container>div:nth-child(2){
+    background-image: url(https://le-de.cdn-website.com/6e6580db0571417c99b179a8ae307597/dms3rep/multi/opt/4269b356-d04a-4c3d-9abc-0b7605e89b3c-1600-2880w.jpg);
+}
+#float-container-2>div:nth-child(1){
+background-image: url(https://le-de.cdn-website.com/6e6580db0571417c99b179a8ae307597/dms3rep/multi/opt/b5a3b87e-1c45-42e1-bcc1-74e600e19871-1600-2880w.jpg);
+}
+#float-container-2>div:nth-child(2){
+background-image: url(https://le-de.cdn-website.com/6e6580db0571417c99b179a8ae307597/dms3rep/multi/opt/6b0e8610-1f48-4fa4-8693-71f7b246dd5d-1600-2880w.jpg);
+}
+.float-container h2{
+    color: white;
+    margin-bottom: 10px;
+}
+.float-container a{
+    color: black;
+    text-decoration: none;
+    background-color: #edc45e;
+    display: inline-block;
+    padding: 20px;
+    transition: all .2s;
+}
+.float-container a:hover{
+    transform: scale(1.1);
+    color: white;
+    background-color: orange;
+}
+
+/* -------showcase-area------- */
+
+.showcase-area{
+    width: 80%;
+    margin: 40px auto;
+    height: 125vh;
+}
+.showcase-area>div{
+    display: flex;
+    height: 50vh;
+}
+.showcase-area>div > *{
+    flex-basis: 50%;
+}
+.showcase-area>div:nth-of-type(1) img{
+    width: 50%;
+    height: 90%;
+    margin-right: 20px;
+}
+.showcase-area>div:nth-of-type(2) img{
+       width: 50%;
+    height: 90%;
+    margin-left: 20px;
+}
+.showcase-area h2{
+    text-align: center;
+    color: orange;
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+.showcase-area>div:not(:last-child){
+    margin-bottom: 30px;
+}
+
+/* ------card-grid  styles-------- */
+
+.car-grid{
+    height: 55vh;
+    padding-top: 30px;
+    background-color:#CCCCCC;
+}
+.car-grid h2{
+    text-align: center;
+    margin-bottom: 30px;
+    color: orange;
+    font-size: 30px;
+    margin-top: 30px;
+}
+.car-grid >div{
+    height: 30vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+.car-grid>div>div{
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.car-grid>div img{
+    height: 90%;
+    width: 100%;
+}
+
+/* -------contact-info styles------ */
+.contact-info {
+display: flex;
+height: 40vh;
+justify-content: center;
+align-items: center;
+height: 60vh;
+}
+.contact-info>div{
+    width: 80%;
+    background-color:#F1F1F1;
+    display: flex;
+    padding: 30px;
+    height: 40vh;
+}
+.contact-info>div>div{
+    flex-basis: 50%;
+}
+.contact-info h2{
+    margin-bottom: 20px;
+    color:#b8111d;
+}
+.contact-info p{
+     margin-bottom: 20px;
+}
+.contact-info a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    background-color: #edc45e;
+    padding: 15px;
+}
+
+
+/* ----------footer styles---------  */
+footer{
+height: 45vh;
+position: relative;
+background-color: #f1f1f1;
+}
+footer > img{
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+}
+footer >div:first-child{
+    display: flex;
+    height: 35vh;
+    padding:25px;
+}
+footer >div:first-child .footer_div-left{
+    flex-basis: 70%;
+}
+footer >div:first-child .footer_div-right{
+    flex-basis: 30%;
+
+}
+.footer_div-left ul li{
+    list-style: none;
+    padding: 5px;
+    display: inline-block;
+}
+.footer_div-left ul li a{
+    text-decoration: none;
+    color: grey;
+}
+.footer_div-left ul li a:hover {
+text-decoration: underline;
+}
+.footer_div-right ul{
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+.footer_div-right ul li{
+    list-style: none;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 5px;
+    flex-basis: 20%;
+    position: relative;
+    padding-right: 0;
+    background-color: #f1f1f1;
+    transition: background-color .2s ;
+}
+.footer_div-right ul li:not(:last-child){
+    margin-right:5px;
+}
+
+.footer_div-right ul li a{
+    text-decoration: none;
+    margin-left: 25px;
+    color: black;
+    text-transform: capitalize;
+}
+.footer_div-right ul li:hover{
+    background-color: lightgray;
+}
+.footer_div-right ul li img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 98%;
+    border-radius: 4px;
+    width: 30px;
+    background-color: #f1f1f1;
+}
+.footer_div-right h2{
+    margin-left: 25px;
+    margin-bottom: 25px;    
+    color: orange;
+}
+.footer_div-right {
+    color: grey;
+}
+.footer_links-info{
+    height: 10vh;
+    position: relative;
+}
+.footer_links-info ul {
+    display: inline-flex;
+    padding: 20px;
+}
+.footer_links-info ul li {
+    list-style: none;
+}
+.footer_links-info ul li a{
+    text-decoration: none;
+    color: orange;
+}
+#logo{
+    height: 70px;
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+}
